@@ -8,7 +8,6 @@ const poemRoutes = require("./routes/poemRoutes");
 const galleryRoutes = require("./routes/galleryRoutes");
 const momentRoutes = require("./routes/momentsRoutes");
 const videoRoutes = require("./routes/videoRoutes");
-const homeCardRoutes = require("./routes/homeCardRoutes");
 const countRoutes = require("./routes/countRoutes");
 
 const app = express();
@@ -31,7 +30,6 @@ app.use("/api/poems", poemRoutes);
 app.use("/api/gallery", galleryRoutes);
 app.use("/api/moments", momentRoutes);
 app.use("/api/videos", videoRoutes);
-app.use("/api/homecards", homeCardRoutes);
 app.use("/api/counts", countRoutes);
 
 // ✅ MongoDB connection
