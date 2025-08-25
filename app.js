@@ -18,7 +18,7 @@ app.use(express.json());
 // ✅ Allow frontend (localhost:3000) to access backend
 app.use(
   cors({
-    origin: ["http://localhost:3000"], // allow your frontend
+    origin: ["https://mj-frontend.netlify.app"], // allow your frontend
     credentials: true, // allow cookies/auth headers
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -26,11 +26,11 @@ app.use(
 );
 
 // ✅ Routes
-app.use("/api/poems", poemRoutes);
-app.use("/api/gallery", galleryRoutes);
-app.use("/api/moments", momentRoutes);
-app.use("/api/videos", videoRoutes);
-app.use("/api/counts", countRoutes);
+app.use("/poems", poemRoutes);
+app.use("/gallery", galleryRoutes);
+app.use("/moments", momentRoutes);
+app.use("/videos", videoRoutes);
+app.use("/counts", countRoutes);
 
 // ✅ MongoDB connection
 mongoose
