@@ -18,7 +18,7 @@ app.use(express.json());
 // ✅ Allow frontend (localhost:3000) to access backend
 app.use(
   cors({
-    origin: ["https://mj-frontend.netlify.app"], // allow your frontend
+    origin: ["https://mranalini.in"], // allow your frontend
     credentials: true, // allow cookies/auth headers
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -39,7 +39,7 @@ mongoose
   .catch((err) => console.error("❌ MongoDB Error:", err));
 
 // ✅ Server running on correct port
-const PORT = 5000;
+const PORT = 9000;
 app.listen(PORT, () =>
   console.log(`🚀 Server running at http://localhost:${PORT}`)
 );
